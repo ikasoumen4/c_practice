@@ -1,0 +1,4 @@
+#gcc test.c
+gcc file_read.c
+./a.out
+
