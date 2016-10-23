@@ -29,11 +29,35 @@ int main(int argc, char* argv[]){
 		return 1;	//異常終了
 	}
 
+	
+
 	char s[256];
 
 	while(fgets(s,256,fp) != NULL){
-		printf("%s",s);
+		//printf("%s",s);
+
+		int i;
+		for(i = 0; s[i] != '\0'; i++){
+			printf("%d\n",s[i]);
+		}
 	}
+	
+
+	/*
+
+	char* line = NULL;
+	size_t linecap = 0;
+	ssize_t linelen;
+
+	while((linelen = getline(&line, &linecap,fp)) != -1){	//読み込み失敗は　-1
+		
+		int i;
+		for(i = 0; line[i] != '\0'; i++){
+			printf("%d\n",line[i]);
+		}
+	}
+
+	*/
 
 	fclose(fp);
 
